@@ -1,0 +1,32 @@
+@CQRSMediatR_HostAddress = http://localhost:5276
+
+### Get all employees
+GET {{CQRSMediatR_HostAddress}}/api/Employee/GetAll
+Accept: application/json
+
+###
+
+### Get employee by ID
+GET {{CQRSMediatR_HostAddress}}/api/Employee/GetById/2
+Accept: application/json
+
+###
+
+### Create new employee
+POST {{CQRSMediatR_HostAddress}}/api/Employee/create
+Content-Type: application/json
+
+{
+  "name": "John Doe",
+  "address": "123 Main St",
+  "email": "john.doe@example.com",
+  "phone": "1234567890"
+}
+
+###
+
+### Delete employee
+DELETE {{CQRSMediatR_HostAddress}}/api/Employee/Delete/1
+Accept: application/json
+
+###
