@@ -2,8 +2,6 @@
 
 This project demonstrates a clean implementation of **CQRS (Command Query Responsibility Segregation)** using **MediatR** in **ASP.NET Core 8 Web API**.
 
-It follows a **modular and scalable folder structure** based on Clean Architecture principles.
-
 ---
 
 ## 📁 Folder Structure
