@@ -1,6 +1,6 @@
 ﻿using MediatR;
 
-namespace CQRSMediatR.Data.Command
+namespace CQRSMediatR.Command
 {
     public record DeleteEmployeeCommand(int Id) : IRequest<int>;
 }

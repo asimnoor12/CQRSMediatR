@@ -1,5 +1,5 @@
-﻿using CQRSMediatR.Data.Command;
-using CQRSMediatR.Data.Query;
+﻿using CQRSMediatR.Command;
+using CQRSMediatR.Query;
 using CQRSMediatR.Models;
 using MediatR;
 using Microsoft.AspNetCore.Http;

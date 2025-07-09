@@ -1,22 +1,22 @@
-﻿using CQRSMediatR.Data.Command;
+﻿using CQRSMediatR.Command;
 using CQRSMediatR.Models;
-using CQRSMediatR.Services;
+using CQRSMediatR.Repositories;
 using MediatR;
 
-namespace CQRSMediatR.Data.Handler
+namespace CQRSMediatR.Handler
 {
     public class UpdateEmployeeHandler : IRequestHandler<UpdateEmployeeCommand, int>
     {
-        private readonly IEmployeeService _employeeService;
+        private readonly IEmployeeRepository _employeeRepo;
 
-        public UpdateEmployeeHandler(IEmployeeService employeeService)
+        public UpdateEmployeeHandler(IEmployeeRepository employeeRepo)
         {
-            _employeeService = employeeService;
+            _employeeRepo = employeeRepo;
         }
 
         public async Task<int> Handle(UpdateEmployeeCommand request, CancellationToken cancellationToken)
         {
-            var employee = await _employeeService.GetEmployeeByIdAsync(request.Id);
+            var employee = await _employeeRepo.GetEmployeeByIdAsync(request.Id);
             if (employee == null) return default;
 
             employee.Name = request.Name;
@@ -24,7 +24,7 @@ namespace CQRSMediatR.Data.Handler
             employee.Email = request.Email;
             employee.Phone = request.Phone;
          
-            return await _employeeService.UpdateEmployeeAsync(employee);
+            return await _employeeRepo.UpdateEmployeeAsync(employee);
         }
     }
 }

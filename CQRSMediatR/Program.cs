@@ -1,6 +1,6 @@
 
 using CQRSMediatR.Data;
-using CQRSMediatR.Services;
+using CQRSMediatR.Repositories;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 using System.Reflection;
@@ -29,7 +29,7 @@ namespace CQRSMediatR
 
 
             // Register Employee Service..
-            builder.Services.AddScoped<IEmployeeService, EmployeeService>();
+            builder.Services.AddScoped<IEmployeeRepository, EmployeeRepository>();
 
             var app = builder.Build();
 

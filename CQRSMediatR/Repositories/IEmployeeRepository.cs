@@ -1,8 +1,8 @@
 ﻿using CQRSMediatR.Models;
 
-namespace CQRSMediatR.Services
+namespace CQRSMediatR.Repositories
 {
-    public interface IEmployeeService
+    public interface IEmployeeRepository
     {
         Task<List<Employee>> GetAllEmployeeAsync();
         Task<Employee?> GetEmployeeByIdAsync(int Id);

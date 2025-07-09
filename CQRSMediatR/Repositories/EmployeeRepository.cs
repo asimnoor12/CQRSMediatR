@@ -2,13 +2,13 @@
 using CQRSMediatR.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace CQRSMediatR.Services
+namespace CQRSMediatR.Repositories
 {
-    public class EmployeeService : IEmployeeService
+    public class EmployeeRepository : IEmployeeRepository
     {
         private readonly AppDbContext _context;
 
-        public EmployeeService(AppDbContext context)
+        public EmployeeRepository(AppDbContext context)
         {
             _context = context;
         }

@@ -1,7 +1,7 @@
 ﻿using CQRSMediatR.Models;
 using MediatR;
 
-namespace CQRSMediatR.Data.Command
+namespace CQRSMediatR.Command
 {
     public record CreateEmployeeCommand : IRequest<Employee>
     {

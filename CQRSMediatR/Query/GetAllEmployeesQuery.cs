@@ -1,7 +1,7 @@
 ﻿using CQRSMediatR.Models;
 using MediatR;
 
-namespace CQRSMediatR.Data.Query
+namespace CQRSMediatR.Query
 {
     public record GetAllEmployeesQuery : IRequest<List<Employee>>;
 }

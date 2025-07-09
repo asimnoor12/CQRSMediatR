@@ -1,6 +1,6 @@
 ﻿using MediatR;
 
-namespace CQRSMediatR.Data.Command
+namespace CQRSMediatR.Command
 {
     public record UpdateEmployeeCommand(int Id, string Name, string Address, string Email, string Phone) : IRequest<int>;
 }
